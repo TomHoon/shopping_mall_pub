@@ -1,4 +1,4 @@
-.appTabContainer {
+.appTabWrapper {
   display: flex;
   padding: 0 16px;
   font-size: 14px;
@@ -37,4 +37,27 @@
   position: absolute;
   bottom: 0px;
   left: 1px;
+}
+
+.heroWrapper {
+  display: flex;
+}
+
+.quickMenuWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4px;
+  padding: 10px 10px 0 10px;
+}
+.quickMenuWrapper > div {
+  flex: 0 0 140px;
+}
+.quickSubMenuWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  padding: 10px 10px 0 10px;
 }
