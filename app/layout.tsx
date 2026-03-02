@@ -25,7 +25,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link href="https://cdn.boxicons.com/3.0.8/fonts/basic/boxicons.min.css" rel="stylesheet" />
+        <link
+          href="https://cdn.boxicons.com/3.0.8/fonts/basic/boxicons.min.css"
+          rel="stylesheet"
+        />
         <link
           href="https://cdn.boxicons.com/3.0.8/fonts/filled/boxicons-filled.min.css"
           rel="stylesheet"
@@ -35,7 +38,11 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>{children}</body>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      >
+        {children}
+      </body>
     </html>
   );
 }
