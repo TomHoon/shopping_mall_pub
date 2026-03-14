@@ -4,6 +4,7 @@ import styles from '@/views/home/Main.module.css';
 import { useState } from 'react';
 import HeroCarousel from '@/views/home/HeroCarousel';
 import QuickMenuCard from '@/views/home/QuickMenuCard';
+import Carousel from '@/components/common/Carousel';
 
 type Tab =
   | {
@@ -72,6 +73,23 @@ const quickSubMenuItems = [
   { src: '/quickSubMenu/yellow.jpg', title: '유즈드 수수료 인하' },
 ];
 
+const mockRow1 = Array.from({ length: 20 }, (_, idx) => ({
+  brand: '루프',
+  name: '크로스 자수 밴딩 핀턱 와이드 롱팬츠 그레이',
+  origin: '',
+  img: '/carousel/pants1.jpg',
+  price: '43200',
+  percent: '40%',
+}));
+const mockRow2 = Array.from({ length: 20 }, (_, idx) => ({
+  brand: '루프',
+  name: '크로스 자수 밴딩 핀턱 와이드 롱팬츠 그레이',
+  origin: '',
+  img: '/carousel/pants1.jpg',
+  price: '43200',
+  percent: '40%',
+}));
+
 export default function Main() {
   const [tabs, setTabs] = useState(mockTabs);
 
@@ -116,6 +134,21 @@ export default function Main() {
           <QuickMenuCard key={idx} {...item} type="sub" />
         ))}
       </div>
+
+      {/* 캐러젤 */}
+      <Carousel
+        carouselTitle={
+          <>
+            많이 찾는 미니멀 <br />
+            스타일가디건
+          </>
+        }
+        rows={1}
+        rows1={mockRow1}
+        rows2={mockRow2}
+        showMore={true}
+        showLike={true}
+      />
     </div>
   );
 }
